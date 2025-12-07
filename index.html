@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --max-width: 960px;
+            --text: #222;
+            --muted: #666;
+            --rule: #e3e3e3;
+            --accent: #005f73;
+            --bg: #fafafa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.5;
+        }
+
+        .column {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+            font-weight: 700;
+        }
+
+        .dek {
+            margin: 0 0 20px;
+            color: var(--muted);
+            font-size: 0.98rem;
+            max-width: 46rem;
+        }
+        .h2.section-title {
+            margin: 32px 0 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .chart-block {
+            border-top: 1px solid var(--rule);
+            padding-top: 16px;
+            margin-top: 16px;
+        }
+
+        .chart-descriptor {
+            margin: 0 0 8px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04rem;
+            color: var(--muted);
+
+        }
+
+        .chart-dek {
+            margin: 10px 0 10px;
+            font-size: 0.95rem;
+            max-width: 44rem;
+        }
+
+        .chart-embed{
+            margin: 0 0 8px;
+        }
+
+        .chart-embed iframe{
+            width: 100%;
+            border: none;
+        }
+
+        .note,
+        .source {
+            margin: 0;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+        .note {
+            margin-top: 8px;
+        }
+        .source {
+            margin-top: 4px;
+        }
+
+        @media (prefers-color-scheme: dark){
+            body{
+                background: #111;
+                color: #f5f5f5;
+            }
+            .dek,
+            .chart-descriptor,
+            .note,
+            .source {
+                color: #bbbbbb;
+            }
+            .chart-block {
+                border-top-color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="column">
+    <h1>Visualization of New York State Vehicle Crashes in 2021.</h1>
+    <p class="dek"> This presentation will show data Visualizations for New York State Vehicle crashes
+    </p>
+
+    <h2 class="section-title">Top 10 Number of crashes in 2021 by county.</h2>
+    <section class="chart-block">
+        <p class="chart-dek">
+           Sulfok recorded the highest number of crashes in 2021. 
+            </p>
+            <p class="chart-descriptor">
+                Total number of crashes
+            </p>
+        <div class="chart-embed">
+          <iframe title="" aria-label="Column Chart" id="datawrapper-chart-7zfTP" src="https://datawrapper.dwcdn.net/7zfTP/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="431" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+          
+        </div>
+        
+        <p class="source">Data.ny.gov</p>
+    </section>
+<!--CHAR2-->
+<h2 class="section-title">Time-of-Day Crash Patterns</h2>
+<section class="chart-block">
+    <p class="chart-dek">
+       Vehicle crashes occurred most frequently during the 17th hour of the day.
+    </p>
+    <p class="chart-descriptor">
+        This chart helps identify high-risk time windows.
+    </p>
+    <div class="chart-embed">
+      <iframe title="" aria-label="Line chart" id="datawrapper-chart-fzZ12" src="https://datawrapper.dwcdn.net/fzZ12/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="360" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+    </div>
+    <p class="source">Source: Data.ny.gov</p>
+</section>
+<!-- CHART 3-->
+<h2 class="section-title">Weather & Road Conditions Impact</h2>
+<section class="chart-block">
+        <p class="chart-descriptor">
+        conditions that lead to more crashes
+    </p>
+    <div class="chart-embed">
+     <iframe title="" aria-label="Bar Chart" id="datawrapper-chart-PSxcO" src="https://datawrapper.dwcdn.net/PSxcO/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="221" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+    </div>
+    
+    <p class="source">Source: Data.ny.gov</p>
+</section>
+
+
+
+</main>
+    
+</body>
+</html>
